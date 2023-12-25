@@ -1,0 +1,16 @@
+<div *ngIf="favorites.length > 0; else noFavorites">
+    <div *ngFor="let photo of favorites" class="card">
+      <button class="remove-btn" (click)="removeFromFavorites(photo)">Remove from Favorites</button>
+      <img class="favorited-img"[src]="photo.img_src" alt="Favorited Mars Photo">
+      <div class="img-info">
+        <p>Date: {{ photo.earth_date }}//</p>
+        <p>Rover: {{ photo.rover.name }}//</p>
+        <p>Camera: {{ photo.camera.full_name }}//</p>
+        <p>ID: {{ photo.id }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noFavorites>
+    <p class="no-favorites">No favorited photos yet.</p>
+  </ng-template>

@@ -1,0 +1,16 @@
+.welcome{
+    position: absolute;
+    left: 10px;
+    bottom: 350px;
+}
+
+.text-welcome{
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+}
