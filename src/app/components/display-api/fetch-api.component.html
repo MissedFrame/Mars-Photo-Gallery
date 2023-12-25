@@ -5,7 +5,11 @@
 <button (click)="filterImagesByCamera('MAST')" class="mast">Filter by MAST</button>
 <button (click)="filterImagesByCamera('CHEMCAM')" class="chemcam">Filter by CHEMCAM</button>
 <button (click)="filterImagesByCamera('NAVCAM')" class="navcam">Filter by NAVCAM</button>
+<button (click)="filterImagesByCamera('PANCAM')" class="pancam">Filter by PANCAM</button>
+<button (click)="filterPhotosByRover('curiosity')" class="curiosity">Filter by Curiosity</button>
+<button (click)="filterPhotosByRover('opportunity')" class="opportunity">Filter by Opportunity</button>
 <button (click)="displayAllPhotos()" class="show-all">Show All</button>
+
 
 <div class="photo-grid" *ngIf="marsPhotos">
   <div *ngFor="let photo of filteredPhotos; let i = index" class="card">

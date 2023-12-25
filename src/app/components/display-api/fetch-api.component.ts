@@ -27,6 +27,8 @@ export class FetchApiComponent {
     this.fetchPhotos('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=FZC1ZGQjvj6EldUo0Qsuxtwpc7SVCb4m4GsbjsQ5&earth_date=2015-6-3');
 
     this.fetchPhotos('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=FZC1ZGQjvj6EldUo0Qsuxtwpc7SVCb4m4GsbjsQ5');
+
+    this.fetchPhotos('https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?api_key=FZC1ZGQjvj6EldUo0Qsuxtwpc7SVCb4m4GsbjsQ5&earth_date=2015-6-3&camera=pancam');
   }
 
 
@@ -68,6 +70,10 @@ export class FetchApiComponent {
   filterImagesByCamera(cameraName: string): void 
   {
     this.filteredPhotos = this.marsPhotos.photos.filter((photo: any) => photo.camera.name === cameraName);
+  }
+
+  filterPhotosByRover(rover: string): void {
+    this.filteredPhotos = this.marsPhotos.photos.filter((photo: any) => photo.rover.name.toLowerCase() === rover.toLowerCase());
   }
 
   addToFavorites(photo: any): void {
