@@ -12,11 +12,11 @@ const routes: Routes = [
   },
   {
     path: 'gallery',
-    component: GalleryComponent
+    component: GalleryComponent,
   },
   {
     path: 'favorites',
-    component: FavoritesComponent
+    component: FavoritesComponent,
   }
 ];
 
